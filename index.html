@@ -158,7 +158,7 @@ h1, h2, h3, h4, h5, h6 { color: var(--ink); text-transform: uppercase; }
   letter-spacing: -0.01em !important;
   font-variant-numeric: lining-nums tabular-nums !important;
 }
-.hero-bg { background: linear-gradient(to top right, #0A0803 0%, #0A0803 60%, #1E4436 100%) !important; overflow: hidden; }
+.hero-bg { background: linear-gradient(to top right, #0A0803 0%, #0A0803 30%, #1E4436 100%) !important; overflow: hidden; }
 .hero-chart { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
 .hero-chart-grid { stroke: var(--line-strong); stroke-width: 1; stroke-dasharray: 3 7; opacity: 0.3; }
 .hero-chart-axis-label {
@@ -570,6 +570,20 @@ padding: 1.5rem 0; }
 /* ── Alternating section bands ── */
 .band-green:before { background: var(--green) !important; }
 .band-alt:before, main > .section.wrap:nth-of-type(2n):before { background: var(--band) !important; }
+
+/* ── Brand gradient on every section after the prize amount, each with a slightly randomized angle/spread so it doesn't repeat identically, but always dark enough to stay legible ── */
+main > .section.wrap { position: relative; }
+main > .section.wrap > * { position: relative; z-index: 1; }
+main > .section.wrap:before {
+  content: ''; position: absolute; z-index: 0;
+  inset: 0 0 0 50%; transform: translate(-50%); width: 100vw;
+  pointer-events: none;
+}
+main > .section.wrap:nth-of-type(1):before { background: linear-gradient(115deg, #0A0803 0%, #0A0803 45%, #1E4436 100%) !important; }
+main > .section.wrap:nth-of-type(2):before { background: linear-gradient(205deg, #0A0803 0%, #0A0803 32%, #1E4436 100%) !important; }
+main > .section.wrap:nth-of-type(3):before { background: linear-gradient(48deg, #0A0803 0%, #0A0803 55%, #1E4436 100%) !important; }
+main > .section.wrap:nth-of-type(4):before { background: linear-gradient(295deg, #0A0803 0%, #0A0803 38%, #1E4436 100%) !important; }
+main > .section.wrap:nth-of-type(5):before { background: linear-gradient(165deg, #0A0803 0%, #0A0803 50%, #1E4436 100%) !important; }
 
 /* ── Countdown ── */
 .cd-num, .cd-num[data-astro-cid-rice64zl] { color: #D1BA6F !important; text-shadow: 0 0 18px rgba(209,186,111,0.55), 0 0 36px rgba(209,186,111,0.3) !important; }
