@@ -14,10 +14,10 @@
   --soft:        #1B1E22;
   --muted:       #8B909A;
   --ink:         #F2F3F5;
-  --emerald:        #00C853;
-  --emerald-deep:   #00A344;
-  --lan:         #00C853;
-  --l1:          #00C853;
+  --emerald:        #03DC5D;
+  --emerald-deep:   #02B44C;
+  --lan:         #03DC5D;
+  --l1:          #03DC5D;
   --l2:          #FF7A3D;
   --neg:         #FF7A3D;
   --ptlc:        #CFE8FF;
@@ -200,7 +200,7 @@ h1, h2, h3, h4, h5, h6 { color: var(--ink); text-transform: uppercase; }
 .banner-bg {
   background-color: var(--green) !important;
   background-image:
-    radial-gradient(140% 120% at 50% -10%, rgba(0,200,83,0.15), transparent 42%),
+    radial-gradient(140% 120% at 50% -10%, rgba(3,220,93,0.15), transparent 42%),
     radial-gradient(120% 100% at 50% 0%, #123526, var(--green) 52%, var(--bg)) !important;
 }
 .banner-bg:after { background-image: linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px) !important; }
@@ -217,7 +217,7 @@ h1, h2, h3, h4, h5, h6 { color: var(--ink); text-transform: uppercase; }
 .track:hover, .card:hover, .tier:hover, .prize:hover, a.partner:hover, .funnel .source:hover {
   transform: translateY(-4px);
   border-color: var(--emerald) !important;
-  box-shadow: 0 10px 28px rgba(0,200,83,0.18) !important;
+  box-shadow: 0 10px 28px rgba(3,220,93,0.18) !important;
 }
 .track p, .card p, .track-blurb { color: var(--fg) !important; }
 .track .bar, .prize .bar { border-radius: 8px 8px 0 0 !important; }
@@ -341,8 +341,8 @@ h1, h2, h3, h4, h5, h6 { color: var(--ink); text-transform: uppercase; }
 
 /* ── Funnel ── */
 .funnel-dest {
-  border-color: rgba(0,200,83,0.35) !important;
-  background: radial-gradient(120% 95% at 50% -12%, rgba(0,200,83,0.15), transparent 55%),
+  border-color: rgba(3,220,93,0.35) !important;
+  background: radial-gradient(120% 95% at 50% -12%, rgba(3,220,93,0.15), transparent 55%),
               linear-gradient(180deg, #0f2a1e, var(--green) 58%) !important;
 }
 .funnel-dest h3 { color: var(--ink) !important; }
@@ -382,9 +382,9 @@ h1, h2, h3, h4, h5, h6 { color: var(--ink); text-transform: uppercase; }
   animation: rule-board-pulse 1.6s infinite;
 }
 @keyframes rule-board-pulse {
-  0% { box-shadow: 0 0 0 0 rgba(0,180,75,0.55); }
-  70% { box-shadow: 0 0 0 7px rgba(0,180,75,0); }
-  100% { box-shadow: 0 0 0 0 rgba(0,180,75,0); }
+  0% { box-shadow: 0 0 0 0 rgba(3,220,93,0.55); }
+  70% { box-shadow: 0 0 0 7px rgba(3,220,93,0); }
+  100% { box-shadow: 0 0 0 0 rgba(3,220,93,0); }
 }
 .rule-board-title {
   color: #7a7f88;
@@ -418,7 +418,7 @@ h1, h2, h3, h4, h5, h6 { color: var(--ink); text-transform: uppercase; }
 .rule-ticker:last-child { border-bottom: none; }
 .rule-ticker:hover { background: rgba(255,255,255,0.04); }
 .rule-ticker:hover .rt-sym { border-color: var(--emerald); color: #fff; }
-.rule-ticker:hover .rt-candles { filter: drop-shadow(0 0 5px rgba(0,180,75,0.45)); }
+.rule-ticker:hover .rt-candles { filter: drop-shadow(0 0 5px rgba(3,220,93,0.45)); }
 .rule-ticker:hover .rt-chg { transform: translateX(-2px); }
 .rt-sym {
   flex: 0 0 auto;
@@ -495,7 +495,7 @@ h1, h2, h3, h4, h5, h6 { color: var(--ink); text-transform: uppercase; }
 .pt-row {
   white-space: nowrap; width: max-content;
   font-family: 'JetBrains Mono', 'Roboto Mono', 'Courier New', monospace;
-  font-weight: 600; font-variant-numeric: tabular-nums;
+  font-weight: 600; font-variant-numeric: lining-nums tabular-nums;
   font-size: clamp(1rem, 2.6vw, 1.6rem); letter-spacing: 0.03em;
   animation: pt-scroll linear infinite;
 }
