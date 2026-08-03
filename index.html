@@ -506,7 +506,7 @@ h1, h2, h3, h4, h5, h6 { color: var(--ink); text-transform: uppercase; }
 .prizehero-lbl { color: var(--emerald) !important; }
 .prizehero-finale { color: var(--fg) !important; }
 .prizehero-finale strong { color: var(--ink) !important; }
-.prizehero-amt { color: var(--emerald) !important; text-shadow: 0 6px 40px rgba(0,200,83,0.25) !important;
+.prizehero-amt { color: #D1BA6F !important; animation: gold-flow 2.8s ease-in-out infinite;
 padding-top:1rem; }
 
 /* ── Buttons ── */
@@ -516,15 +516,27 @@ padding-top:1rem; }
 .btn.solid:hover { background: var(--emerald-deep) !important; border-color: var(--emerald-deep) !important; }
 .btn.gold { border-color: var(--emerald) !important; color: var(--emerald) !important; }
 .btn.gold:hover { background: var(--emerald) !important; color: #fff !important; }
-.nav-shop { border-color: var(--emerald) !important; color: var(--emerald) !important; font-weight: 600; }
-.nav-shop:hover { background: var(--emerald) !important; color: #fff !important; }
+.nav-shop { border-color: #D1BA6F !important; color: #D1BA6F !important; font-weight: 600; box-shadow: none !important; transition: box-shadow 0.25s ease, background 0.2s ease, color 0.2s ease; }
+.nav-shop:hover { background: #D1BA6F !important; color: var(--bg) !important; box-shadow: 0 0 16px rgba(209,186,111,0.7), 0 0 32px rgba(209,186,111,0.4) !important; }
 
 /* ── Alternating section bands ── */
 .band-green:before { background: var(--green) !important; }
 .band-alt:before, main > .section.wrap:nth-of-type(2n):before { background: var(--band) !important; }
 
 /* ── Countdown ── */
-.cd-num { color: var(--emerald) !important; }
+.cd-num, .cd-num[data-astro-cid-rice64zl] { color: #D1BA6F !important; animation: gold-flow 2.8s ease-in-out infinite; }
+
+/* ── Gold light-flow glow (countdown + prize amount) ── */
+@keyframes gold-flow {
+  0%, 100% { text-shadow: 0 0 10px rgba(209,186,111,0.3), 0 0 24px rgba(209,186,111,0.15); }
+  50% { text-shadow: 0 0 24px rgba(209,186,111,0.65), 0 0 46px rgba(209,186,111,0.35); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .prizehero-amt, .cd-num, .cd-num[data-astro-cid-rice64zl] {
+    animation: none;
+    text-shadow: 0 0 14px rgba(209,186,111,0.4);
+  }
+}
 
 /* ── Gantt ── */
 .gantt { background: linear-gradient(180deg, var(--soft), var(--surface-2)) !important; border-color: var(--line) !important; }
