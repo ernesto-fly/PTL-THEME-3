@@ -28,6 +28,14 @@
   --font: 'Roboto Mono', 'Courier New', monospace;
 }
 
+@font-face {
+  font-family: 'Mona Sans Expanded';
+  src: url('https://cdn.jsdelivr.net/gh/github/mona-sans@main/fonts/webfonts/variable/MonaSansVF-Expanded%5Bopsz%2Cwght%2Cital%5D.woff2') format('woff2-variations');
+  font-weight: 200 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* ── Body: Inter everywhere except the dark ticker/board components ── */
 body { background: var(--bg); color: var(--fg); font-family: 'Inter', system-ui, sans-serif; }
 body:before { background: var(--emerald); }
@@ -88,8 +96,12 @@ h1, h2, h3, h4, h5, h6, .banner-title {
 
 .cd-num, .prizehero-amt, .rt-chg, .sp, .gnum,
 .hero-chart-tag, .hero-chart-axis-label {
-  font-variant-numeric: tabular-nums;
-  font-family: 'JetBrains Mono', 'Roboto Mono', 'Courier New', monospace;
+  font-family: 'Mona Sans Expanded', 'Inter', sans-serif !important;
+  font-weight: 600 !important;
+  font-style: normal !important;
+  leading-trim: none;
+  line-height: 64px !important;
+  font-variant-numeric: lining-nums tabular-nums !important;
 }
 
 /* ── Headings ── */
