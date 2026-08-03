@@ -108,12 +108,13 @@ h1, h2, h3, h4, h5, h6, .banner-title {
 
 .cd-num, .prizehero-amt, .rt-chg, .sp, .gnum,
 .hero-chart-tag, .hero-chart-axis-label {
-  font-family: 'Mona Sans Expanded', 'Inter', sans-serif !important;
+  font-family: 'JetBrains Mono', 'Mona Sans Expanded', 'Inter', sans-serif !important;
   font-weight: 600 !important;
   font-style: normal !important;
   leading-trim: none;
   line-height: 64px !important;
   font-variant-numeric: lining-nums tabular-nums slashed-zero !important;
+  font-feature-settings: "zero" 1 !important;
 }
 
 /* ── Headings ── */
@@ -530,7 +531,7 @@ h1, h2, h3, h4, h5, h6 { color: var(--ink); text-transform: uppercase; }
 .pt-row {
   white-space: nowrap; width: max-content;
   font-family: 'JetBrains Mono', 'Roboto Mono', 'Courier New', monospace;
-  font-weight: 600; font-variant-numeric: lining-nums tabular-nums slashed-zero;
+  font-weight: 600; font-variant-numeric: lining-nums tabular-nums slashed-zero; font-feature-settings: "zero" 1;
   font-size: clamp(1rem, 2.6vw, 1.6rem); letter-spacing: 0.03em;
   animation: pt-scroll linear infinite;
 }
@@ -554,7 +555,7 @@ h1, h2, h3, h4, h5, h6 { color: var(--ink); text-transform: uppercase; }
 .prizehero-finale { color: var(--fg) !important; }
 .prizehero-finale strong { color: var(--ink) !important; }
 .prizehero-amt { color: #D1BA6F !important; text-shadow: 0 0 18px rgba(209,186,111,0.55), 0 0 36px rgba(209,186,111,0.3) !important;
-padding-top:1rem; }
+padding: 1.5rem 0; }
 
 /* ── Buttons ── */
 .btn { border-color: var(--line-strong) !important; color: var(--fg) !important; font-weight: 600; }
